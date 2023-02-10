@@ -1,29 +1,37 @@
-# weatherapp
+# Weather App
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+Please clone the repository to your local computer to view the weather application using the following commands
+```
+git clone https://github.com/robgo/weatherapp.git .
+```
+After cloning the application, you will need to run npm install to install all dependencies such as vuejs etc.
+```
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+After installing all dependencies, make sure you already have an Open Weather APP and Four Square api keys. 
+If you don't have them, please create first an open weather app api key via this [link](https://home.openweathermap.org/users/sign_in) and for four square please use this [link](https://home.openweathermap.org/users/sign_in)
 
-```sh
-npm run dev
+After obtaining the keys you will need to edit 2 files in order to add your generated keys. 
+Import the codes to your favorite editor e.g **VS Code**
+
+Once imported, navigate to the **src > services** folders and open both of the files
+
+> fourSquareApiService.js
+
+> openWeatherApiService.js
+
+Both of these files contains the api keys for each of the respected third party services. 
+
+Please look for the line with the code
+```
+const appid = 'YOUR_API_KEY_HERE'
 ```
 
-### Compile and Minify for Production
+Replace the **YOUR_API_KEY_HERE** with your generated api key from both of the third party providers. 
 
-```sh
-npm run build
+After adding your API KEYS, you are now ready to run the app in dev mode
+
+```
+npm run dev
 ```
